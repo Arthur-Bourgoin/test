@@ -1,0 +1,1257 @@
+*, ::before, ::after{
+	box-sizing: border-box;
+	margin : 0;
+	padding : 0;
+} 
+
+
+html {
+    font-family: Arial;
+	background-color :  #2e4053;
+}
+
+
+body {
+	display : flex;
+	flex-direction : column;
+/*	overflow-y: scroll; */
+}
+
+header {
+	flex-direction : column;
+	align-items : center;
+	background-color : white;
+}
+
+
+.container_logo {
+	display : flex;
+	justify-content : center;
+	background-color : white;
+	width : 100%;
+}
+
+.container_menu {
+	display : flex;
+	justify-content : center;
+	background-color : #ff3a39;
+	width : 100%;
+}
+
+
+main {
+	max-width : 1200px;
+	margin : 0 auto;
+	justify-content : center;
+}
+
+
+.container_footer {
+	display : flex;
+	align-items : center;
+	max-width : 1200px;
+}
+
+
+footer {
+	display : flex;
+	justify-content : center;
+	background-color :  #1c2833 ;
+}
+
+hr {
+	color : white;
+}
+
+
+
+/* #################################################################### */
+/* ###########################    HEADER    ########################### */
+/* #################################################################### */
+
+
+
+/* #############    IMAGES LOGO    ############# */
+
+.div_logo {
+	max-width : 1200px;
+	display : flex;
+	align-items : center;
+	padding : 1%;
+	background-color : white;
+}
+
+#div_img1 {
+	flex-basis : 12%;
+}
+
+#div_img2 {
+	flex-basis : 47%;
+	padding : 0 3%;
+	margin-right : 27%;
+}
+
+#div_img3 {
+	flex-basis : 14%;
+}
+
+#div_container_img_menu {
+	display : none;
+}
+
+header img {
+	width : 100%;
+}
+
+
+/* #############    MENU DE NAVIGATION ORDI/TABLETTE   ############# */
+
+
+.div_menu {
+	max-width : 1200px;
+	width : 100%;
+}
+
+.ul_menu {
+	display : flex;
+}
+
+.items {
+	list-style-type : none;
+	/* padding : 1% 3%; */
+	position : relative;
+	flex-basis : 25%;
+	text-align : center;
+}
+
+.items > a, .items > p {		/* mettre le padding sur les a pas sur les li */
+	display : block;
+	text-decoration : none;
+	color : white;
+	background-color : #ff3a39;
+	padding : 10px 1%;
+}
+
+.fleche_competence {
+	color : white;
+	font-size : 80%;
+}
+
+.items:hover > a, .items:hover > p{
+	background-color : #C40010;		/* On enleve 4px au padding top (taille de la bordure) */
+	padding : 6px 1% 10px 1%;		/* pour pas que la bordure du items le fasse sortir du bandeau */
+}
+
+.items:hover {
+	border-top : 4px solid #2e4053;
+}
+
+
+
+/* #####   sous-menu   ##### */
+
+.ul_sous_menu {
+	display : none;
+	position : absolute;
+	top : 100%;
+	width : 100%;
+	z-index : 1000;		/* indice de plan dans la page */
+}
+
+.items_sm {
+	list-style-type : none;
+	text-align : center;
+	border-top : 2px solid black;
+}
+
+.items_sm > a { 
+	display : block;
+	text-decoration : none;
+	color : white;
+	background-color : #C40010;
+	padding : 3% 1%;
+}
+
+
+.items_sm:hover > a {
+	background-color : #ff3a39;
+	color : white;
+}
+
+.items:nth-child(3):hover .ul_sous_menu {
+	display : block;
+}
+
+
+
+/* #############    MENU DE NAVIGATION TELEPHONE   ############# */
+
+#div_container_img_menu {
+	display : none;
+	position : relative;
+	top : -6px;
+	flex-basis : 40%;
+}
+
+
+.div_img_menu {
+	width : 17%;
+	float : right;
+	padding-bottom : 7%;
+}
+
+.trait_menu {
+	display : block;
+	margin-top : -15%;
+	font-weight : bold;
+	font-size : 3vw;
+}
+
+.div_menu_tel {
+	display : none;
+	position : absolute;
+	left : 0;
+	top : 90%;
+	width : 100%;
+}
+
+.items_tel {
+	list-style-type : none;
+	position : relative;
+	border-bottom : 2px solid black;
+	text-align : center;
+}
+
+.items_tel > a, .items_tel > p {		/* mettre le padding sur les a pas sur les li */
+	display : block;
+	text-decoration : none;
+	color : white;
+	background-color : #ff3a39;
+	padding : 4% 1%;
+	font-size : 90%;
+}
+
+.items_tel:hover > a, .items_tel:hover > p {
+	background-color : #C40010;
+}
+
+.ul_sous_menu_tel {
+	display : none;
+	position : absolute;
+	top : -5%;
+	width : 90%;
+	left : -90%;
+}
+
+.ul_sous_menu_tel > .items_sm > a {
+	font-size : 85%;
+}
+
+.div_img_menu:hover .div_menu_tel {
+	display : block;
+}
+	
+
+.items_tel:nth-child(3):hover .ul_sous_menu_tel {
+	display : block;
+}
+
+
+
+/* ############################################################################### */
+/* ##############################    PAGE ACCUEIL    ############################# */
+/* ############################################################################### */
+
+.page1 .commentaire {
+	font-weight : bold;
+}
+
+.page1 li {
+	list-style-type:none;
+}
+.page1 .colonne1{
+	border:3px solid black;
+	background-color: #CCC;
+	display:flex;
+	margin:1%;
+}
+.page1 .colonne1 p { 
+    text-align: center;
+	border : 3px solid black ;
+	margin : 1%;
+}
+.page1 .colonne1 img {
+	width: 100%;
+	border : 3px solid black;
+	
+}
+.page1 .case1 {
+	margin:1%;
+}
+.page1 .colonne2{
+	border:3px solid black;
+	background-color: #CCC;
+	width:80;
+	display:flex;
+	margin:1%;
+}
+.page1 .colonne2 ul { 
+    text-align: center;
+	border : 3px solid black;
+	margin : 1%;
+}
+	
+.page1 .case3 img {
+	width: 100%;
+}
+
+.page1 .case3:hover {
+	margin-right : 0;
+	width : 105%;
+}
+
+.page1 .case3 {
+	display : flex;
+	align-items : center;
+	justify-content : center;
+	border : 3px solid black;
+	margin:1%	
+}
+.page1 .colonne2 p { 
+    text-align: center;
+	border : 3px solid black;
+	margin : 1%;
+}
+.page1 .case4 {
+	text-align: center;
+	margin : 1%;
+}
+.page1 .case5 {
+	text-align: center;
+	margin : 1%;
+}
+.page1 .colonne3 {
+	border:3px solid black;
+	background-color: #CCC;
+	width:80;
+	display:block;
+	margin:1%;
+}
+.page1 .cube2 {
+	border:3px solid black;
+	margin:1%;
+	display:flex;
+	
+}
+.page1 .colonne3 img {
+	width: 50%;
+	margin:2%;
+}
+.page1 .case6 img{
+	width: 520px;
+	border : 3px solid black;
+}
+.page1 .case7 {
+	text-align: center;
+	margin :1%;
+	border: 3px solid black;
+	width:1000px;
+}
+.page1 .colonne4{
+	border:3px solid black;
+	background-color: #CCC;
+	width:80;
+	display:flex;
+	margin:1%;
+}
+
+.page1 .case10 {
+	text-align: center;
+	margin :1%;
+	border: 3px solid black;
+	width:1000px;
+}
+.page1 .colonne4 img {
+	width: 100px;
+	margin:1%;
+}
+.page1 .case11 img{
+	width: 100px;
+	border : 3px solid black;
+}
+	
+
+
+
+/* ############################################################################### */
+/* ###########################    PAGE PRESENTATION    ########################### */
+/* ############################################################################### */
+
+
+
+.page2 h1 {
+	color : white;
+	text-align : center;
+	margin : 2% 0;
+}
+
+
+.page2 hr {
+	margin : 2% 0;
+}
+
+
+/* #############    PARTIE 1    ############# */
+
+.page2 .partie1 {
+	display : flex;
+	flex-wrap : wrap;
+	padding : 1%;
+}
+
+.page2 .partie1 span {
+	font-weight : bold;
+}
+
+
+/* ### PREMIER PARAGRAPHE ### */
+.page2 .div_txt1 {
+	color : white;
+	flex-basis : 100%;
+	margin-bottom : 1%;
+}
+
+.page2 .div_txt1 p {
+	line-height : 150%;
+	text-align : justify;
+}
+
+.page2 .p_indentation_1 {
+	margin-left  :10%;
+}
+
+
+/* ### DEUXIEME PARAGRAPHE ### */
+.page2  .div_txt2 {
+	color : white;
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+	flex-basis : 48%;
+	margin-right : 1%;
+}
+
+.page2 .div_txt2>p {
+	line-height : 150%;
+	text-indent : 10%;
+	text-align : justify;
+}
+
+
+.page2 .title_règle {
+	display : block;
+	font-weight : bold;
+	margin : 3% 0;
+	text-align : center;
+	font-size : 130%;
+}
+
+.page2 .title_p {
+	font-weight : normal;
+	font-style : italic;
+	text-decoration : underline;
+}
+
+
+.page2 .p_indentation_2 {
+	line-height : 150%;
+	margin-left  :10%;
+}
+
+
+.page2  .div_tableau {
+	flex-basis : 51%;
+}
+
+.page2 table {
+	width : 100%;
+	border-collapse : collapse;
+	background-color : white;
+}
+
+.page2 table td {
+	padding : 2% 1%;
+	text-align : center;
+	border : 3px solid black;
+	background-color :  #ccd1d1;
+}
+
+.page2 table th {
+	padding : 2% 0;
+	text-align : center;
+	border : 3px solid black;
+	background-color : #ff3a39;
+}
+
+
+.page2 .name {
+	background-color : #C40010;
+}
+
+.page2 .bulle_line {
+	display : none;
+	font-size : 90%;
+	position : absolute;
+	background-color : pink;
+	top : 100%;
+	left : 50%;
+	padding : 8%;
+	font-weight : normal;
+	z-index : 100;
+	border : 1px solid black;
+}
+
+.page2 th > div {
+	position : relative;
+}
+
+.page2 .bulle_colonne {
+	display : none;
+	font-size : 90%;
+	position : absolute;
+	background-color : pink;
+	top : 120%;
+	right : 10%;
+	padding : 25%;
+	font-weight : normal;
+	z-index : 100;
+	border : 1px solid black;
+}
+
+
+/* bulle d'informations tableau compétences */
+.page2 .th_S1_01:hover .div_S1_01 { display : block; }
+.page2 .th_S1_02:hover .div_S1_02 { display : block; }
+.page2 .th_S1_03:hover .div_S1_03 { display : block; }
+.page2 .th_S1_04:hover .div_S1_04 { display : block; }
+.page2 .th_S1_05:hover .div_S1_05 { display : block; }
+.page2 .th_S1_06:hover .div_S1_06 { display : block; }
+.page2 .th_R1_01:hover .div_R1_01 { display : block; }
+.page2 .th_R1_02:hover .div_R1_02 { display : block; }
+.page2 .th_R1_03:hover .div_R1_03 { display : block; }
+.page2 .th_R1_04:hover .div_R1_04 { display : block; }
+.page2 .th_R1_05:hover .div_R1_05 { display : block; }
+.page2 .th_R1_06:hover .div_R1_06 { display : block; }
+.page2 .th_R1_07:hover .div_R1_07 { display : block; }
+.page2 .th_R1_08:hover .div_R1_08 { display : block; }
+.page2 .th_R1_09:hover .div_R1_09 { display : block; }
+.page2 .th_R1_10:hover .div_R1_10 { display : block; }
+.page2 .th_R1_11:hover .div_R1_11 { display : block; }
+.page2 .th_R1_12:hover .div_R1_12 { display : block; }
+.page2 .th_C1:hover .div_C1 { display : block; }
+.page2 .th_C2:hover .div_C2 { display : block; }
+.page2 .th_C3:hover .div_C3 { display : block; }
+.page2 .th_C4:hover .div_C4 { display : block; }
+.page2 .th_C5:hover .div_C5 { display : block; }
+.page2 .th_C6:hover .div_C6 { display : block; }
+
+
+
+	
+
+/* #############    PARTIE 2    ############# */
+
+
+.page2 .div_left, .page2 .div_right {
+	display : flex;
+	margin-bottom : 1%;
+}
+
+
+.page2 .div_img {
+	flex-basis : 34%;
+}
+
+.page2 .partie2 img {
+	border-radius : 5%;
+	border : 3px solid black;
+	margin-top : 1%;
+	width : 100%;
+}
+
+.page2 .div_grid {
+	flex-basis : 65%;
+	display : grid;
+	margin : 1% 0;
+	grid-template-columns : repeat(3, 1fr);
+	grid-template-rows : repeat(2, 1fr);
+	grid-gap : 6% 2%;
+}
+
+.page2 .div_Res_C1 { background-color : #FF5E4D; }
+.page2 .div_Res_C2 { background-color : #FDBFB7; }
+.page2 .div_Res_C3 { background-color : #FFDE75; }
+.page2 .div_Res_C4 { background-color : #87E990; }
+.page2 .div_Res_C5 { background-color : #ADD8E6; }
+.page2 .div_Res_C6 { background-color : #9E9E9E; }
+
+.page2 .div_left .div_img {
+	margin-right : 1%;
+}
+
+.page2 .div_right .div_img {
+	margin-left : 1%;
+}
+
+.page2 .div_Res {
+	display : flex;
+	flex-wrap : wrap;
+	justify-content : center;
+	align-items : center;
+	text-align : center;
+	border-radius : 5%;
+	border  : 2px solid black;
+	font-weight : bold;
+}
+
+.page2 .div_Res p {
+	width : 100%;
+}
+
+
+
+/* ######################################################## */
+/* ################### PAGE COMPETENCE #################### */
+/* ######################################################## */
+
+
+
+/* ########### Page complete ########## */
+.page_3 hr{
+	margin:2%;
+}
+
+/* # Titre page # */
+.page_3 .div3_titre_page{
+	color : white;
+	margin-top : 1%;
+	text-align:center;
+	padding-top:1%;
+}
+
+/* ########### Apprentissage critique ########### */
+.page_3 .div3_apprentissage_critique{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.page_3 .div3_apprentissage_critique .div3_ac_image{
+	flex-basis:30%;
+	text-align:center;
+	align-items:center;
+}
+
+.page_3 .div3_apprentissage_critique .div3_ac_image img{
+	border:3mm ridge rgba(219, 208, 208, 1.00);
+	height:75%;
+	width:75%;
+}
+
+.page_3 .div_ac_text{
+	flex-basis:70%;
+	display:block;
+	align-items:center;
+	margin-left:1%;
+	border:solid;
+	margin-right:2%;
+	padding : 1% 4%;
+	background-image:linear-gradient(to right,#C00505,#C82C2C,#AFAFAF);
+}
+.page_3 .div_ac_text:hover{
+	box-shadow: 0 5px 50px rgba(0,0,120,0.5);
+}
+.page_3 .div_ac_text h4{
+	text-align:10% left;
+	margin-left:3.5%;
+	margin-bottom:2%;
+}
+.page_3 .div_ac_text ul>li{
+	margin-bottom:2%;
+}
+
+.page_3 .div3_eval_text h4,
+.page_3 .titre_ressource h4,
+.page_3 .div3_SAE {
+	color : white;
+}
+
+/* ########### Evaluation ########### */
+
+.page_3 .div3_eval_text {
+	margin-bottom : 2%;
+}
+
+
+.page_3 .div3_evaluation{
+	display:block;
+	text-align:center;
+	flex-wrap:wrap;
+}
+.page_3 .div3_eval_tab{
+	width:96%;
+	margin-left:2%;
+	background-image:linear-gradient(to right,#C00505,#C82C2C,#AFAFAF);
+}
+
+.page_3 .div3_eval_tab table{
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+	width:100%;
+}
+
+.page_3 .div3_eval_tab td, th {
+    border:solid 1px black;
+	padding : 3% 0;
+}
+.page_3 .div3_eval_tab td:hover,.page_3 .div3_eval_tab th:hover{
+	box-shadow: 0 5px 50px rgba(0,0,120,0.5);
+	background-image:linear-gradient(to right,#C00505,#AFAFAF);
+}
+/* ########### SAE ########### */
+.page_3 .div3_SAE_titre{
+	text-align:center;
+}
+
+.page_3 .div3_SAE_pres {
+	padding : 2% 5%;
+}
+
+.page_3 .div3_SAE_pres li>ul>li:hover{
+	color:#FFFFFF;
+	font-style:italic;
+}
+.page_3 .div3_SAE_pres ul>li{
+	margin-top:2%;
+}
+.page_3 .div3_SAE_pres ul>li>ul>li{
+	margin-top:0.8%;
+}
+
+/* ########### Ensemble ressources ########### */
+.page_3 .div3_ensemble_ressources .titre_ressource{
+	text-align:center;
+	margin-bottom : 2%;
+}
+
+.page_3 .div3_ensemble_ressources .ressource{
+	display:flex;
+	border:solid;
+	border-width:0.1em;
+	margin-bottom:2%;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	background-image:linear-gradient(to right,#C00505,#C82C2C,#AFAFAF);
+	margin-right:2%;
+	margin-left:2%;
+}
+.page_3 .div3_ensemble_ressources .ressource:hover{
+	box-shadow: 0 5px 50px rgba(0,0,120,0.3);
+	height:120%;
+	align-items:center;
+	font-size:110%;
+}
+
+.page_3 .div3_ensemble_ressources .ressource .rsc_code{
+	flex-basis:20%;
+	border: solid black;
+	padding-bottom:0.5%;
+	padding-top:0.5%;
+	margin-bottom:1%;
+	margin-top:1%;
+	margin-left:1%;
+	margin-right:0.2%;
+	justify-content:center;
+	align-items:center;
+	background-color:#7f0000;
+	text-align:center;
+}
+.page_3 .div3_ensemble_ressources .ressource .rsc_nom{
+	flex-basis:76%;
+	display:flex;
+	margin-bottom:1%;
+	margin-top:1%;
+	margin-left:0.2%;
+	margin-right:1%;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+}
+.page_3 .div3_ensemble_ressources .ressource .rsc_ac_lies{
+	flex-basis:100%;
+	margin-left:1%;
+	margin-right:1%;
+	display:none;
+	padding  : 1%;
+}
+
+.page_3 .div3_ensemble_ressources .ressource li {
+	margin-left  : 4%;
+}
+
+
+
+.page_3 .div3_ensemble_ressources .ressource .rsc_ac_lies ul{
+	margin-bottom:0%;
+}
+.page_3 .div3_ensemble_ressources .ressource .rsc_ac_lies h4{
+	margin-top:1%;
+}
+
+.page_3 .div3_ensemble_ressources .ressource .rsc_desc{
+	flex-basis:100%;
+	margin-left:1%;
+	margin-right:1%;
+	display:none;
+	padding : 1% 2%;
+}
+.page_3 .div3_ensemble_ressources .ressource:hover .rsc_ac_lies{
+	display:block;
+}
+.page_3 .div3_ensemble_ressources .ressource:hover .rsc_desc{
+	display:block;
+}
+
+
+/* ########### Lien haut ########### */
+.page_3 .div3_lien_haut{
+	text-align:center;
+	margin-bottom : 2%;
+}
+
+.page_3 .div3_lien_haut a {
+	color : white;
+}
+
+/* ########################################################## */
+/* ###################### PAGE CONTACT ###################### */
+/* ########################################################## */
+
+.page_4 hr{
+	margin:2%;
+}
+
+/* ########### Titre page ########### */
+.page_4 .div4_titre_page{
+	color : white;
+	text-align:center;
+	padding-top:1%;
+}
+/* ########### Formulaire ########### */
+.page_4 .div4_formulaire{
+	border:solid;
+	margin-bottom:2%;
+	margin-left:2%;
+	margin-right:2%;
+	background-image:linear-gradient(to right,#ff3a39,#AFAFAF);
+}
+.page_4 .div4_formulaire label:hover{
+	color:#FFFFFF;;
+	font-style:italic;
+}
+	
+.page_4 .div4_formulaire .form_titre{
+	text-align:center;
+}
+
+.page_4 h4{
+	margin : 4% 0;
+}
+
+.page_4 .div4_formulaire .form_content_pc form{
+	display:flex;
+	justify-content:space-between;
+}
+
+.page_4 .div4_formulaire .form_content_pc form p{
+	margin : 5% 0;
+}
+
+.page_4 .div4_formulaire .form_content_responsive form p{
+	margin : 5% 0;
+}
+
+.page_4 .form_droite{
+	flex-basis:50%;
+}
+
+.page_4 .form_gauche {
+	margin-left : 3%;
+}
+.page_4 .form_gauche #envoyer_pc{
+	text-align:center;
+}
+.page_4 .form_gauche #envoyer_pc input{
+	color : white;
+	padding:1% 2%;
+	width:30%;
+	border-radius:10%;
+	background-color:#7f0000;
+}
+.page_4 .form_gauche #envoyer_pc input:hover{
+	background-color:#ff3a39;
+	width:32%;
+	height:100%;
+}
+.page_4 .form_gauche #prenom_pc, #nom_pc, #mail_pc{
+	width:60%;
+	border:none;
+	border-bottom:solid #D9D8D8 0.5px;
+	background-color:none;
+}
+.page_4 .form_droite #message_pc{
+	width:90%;
+}
+.page_4 .form_gauche{
+	flex-basis:50%;
+}
+.page_4 .div4_formulaire .form_gauche p{
+	margin-left:2%;
+}
+.page_4 .div4_formulaire .form_content_responsive{
+	text-align:center;
+	display:none;
+}
+.page_4 .div4_formulaire .form_content_responsive #prenom_resp, #nom_resp, #mail_resp{
+	width:50%;
+}
+.page_4 .div4_formulaire .form_content_responsive #message_resp{
+	width:80%;
+}
+	
+/* ########### Renseignement ########### */
+.page_4 .div4_renseignement{
+	display:flex;
+	justify-content:space-between;
+	border-collapse:collapse;
+	align-items:center;
+}
+.page_4 .rsg_photo{
+	flex-basis:50%;
+	text-align:center;
+}
+
+.page_4 .rsg_photo img{
+	height:85%;
+	width:85%;
+	border:3mm ridge #ff3a39;
+}
+
+.page_4 .rsg_localisation{
+	flex-basis:50%;
+	display:block;
+	align-items:center;
+	background-image:linear-gradient(to right,#ff3a39,#AFAFAF);
+	margin-right:2%;
+	margin-bottom:2%;
+	border:solid;
+}
+
+.page_4 .rsg_adresse h4{
+	text-align:center;
+}
+.page_4 .rsg_adresse p{
+	margin-left:5%;
+}
+.page_4 .rsg_carte{
+	text-align:center;
+}
+
+.page_4 .rsg_carte iframe{
+	height:15em;
+	width:20em;
+	margin-bottom:2%;
+}
+
+
+/* #################################################################### */
+/* ###########################    FOOTER    ########################### */
+/* #################################################################### */
+
+
+
+/* ###### PARTIE PLAN ##### */
+
+
+.div_plan {
+	flex-basis : 55%;
+	padding : 1%;
+	color : white;
+}
+
+.ul_footer {
+	display : flex;
+	flex-wrap : wrap;
+}
+
+.items_footer {
+	flex-basis : 33.33%;
+	list-style-type : none;
+}
+
+
+.div_plan p {
+	font-size : 110%;
+	margin-bottom : 1%;
+}
+
+.div_plan a {
+	font-size : 90%;
+	padding : 2% 2% 2% 0%; /* padding de 2% pour être aligné avec "Plan du site" */
+	color : white;
+}
+
+.items_footer:hover a {
+	font-size : 92%;
+}
+
+/* ###### PARTIE LIEN CNIL ##### */
+
+.div_container_CNIL {
+	flex-basis : 16%;
+	padding : 1% 0;
+	/* background-color : pink; */
+}
+
+.container_icons {
+	display : flex;
+	margin-bottom : 10%;
+	justify-content : space-between;
+	padding : 1%;
+/*	border : 2px solid; */
+}
+
+.icons {
+	font-size : clamp( 1px, 3vw, 28px );
+	color : white;
+}
+
+.container_icons a:hover .icons, 
+.container_icons_tel a:hover .icons {
+	/* rotation des icones */
+	transform : rotate(360deg);
+	transition : 1.5s;
+}
+
+.container_icons_tel {
+	display : none;
+}
+
+
+.div_CNIL {
+	border : 3px solid white;
+	border-radius : 6%;
+	padding : 2%;
+	text-align : center;
+}
+
+.div_CNIL a {
+	text-decoration : none;
+	color  : white;
+}
+
+.div_CNIL:hover a {
+	font-size : 105%;
+	font-weight : bold;
+}
+
+.div_CNIL_tel:hover a {
+	font-weight : bold;
+}
+
+
+.div_CNIL_tel {
+	display : none;
+	border-radius : 6%;
+	text-align : center;
+}
+
+
+/* ###### PARTIE IMAGE ##### */
+
+.div_img_entreprise {
+	flex-basis : 23%;
+	background-color : white;
+	margin-left : 6%;
+}
+
+footer img {
+	width : 100%;
+	/* border : 1px solid black; */
+}
+
+/* #################################################### */
+/* ################# RESPONSIVE ####################### */
+/* #################################################### */
+
+
+@media only screen and (max-width: 640px){
+/* smartphones et petites tablettes */
+
+/* ########## HEADER ########## */
+	
+	.div_menu {
+		display : none;
+	}
+	
+	#div_img2 {
+		margin-right : 0;
+	}
+	
+	
+	#div_img3 {
+		display : none;
+	}
+	
+	#div_container_img_menu {
+		display : block;
+	}
+	
+	/* ########## PAGE PRESENTATION ########## */
+	
+	.page2 .partie1 {
+		display : block;
+	}
+	
+	.page2  .div_txt2 {
+		margin-right : 0;
+		margin-bottom : 1%;
+	}
+	
+	.page2 .div_Res p {
+		display : none;
+	}
+	
+	.page2 .div_grid {
+	flex-basis : 65%;
+	display : grid;
+	grid-template-columns : repeat(2, 1fr);
+	grid-template-rows : repeat(3, 1fr);
+	}
+	
+	/* ###### COMPETENCES ##### */
+	
+	.page_3 .div3_ensemble_ressources .ressource .rsc_code{
+		flex-basis:100%;
+		margin-bottom:1%;
+		margin-top:1%;
+		margin-left:1%;
+		margin-right:1%;
+	}
+	
+	.page_3 .div3_ensemble_ressources .ressource .rsc_nom{
+		flex-basis:100%;
+		margin-bottom:1%;
+		margin-top:0%;
+		margin-left:1%;
+		margin-right:1%;
+	}
+	
+	.page_3 .div3_apprentissage_critique{
+		display:block;
+		border-collapse:collapse;
+	}
+	.page_3 .div_ac_text{
+		margin-left:2%;
+	}
+	.page_3 .div3_apprentissage_critique .div3_ac_image img{
+		height:20%;
+		width:20%;
+	}
+	
+	.page_4 .div4_renseignement{
+		display:block;
+	}
+	.page_4 .div4_renseignement .rsg_photo img{
+		height:50%;
+		width:50%;
+		margin-bottom:5%;
+		margin-top:5%;
+	}
+	.page_3 .div3_eval_tab table{
+		font-size:0.45rem;
+	}
+	
+	/* ##### CONTACT ##### */
+	
+	.page_4 .div4_formulaire .form_content_pc{
+		display:none;
+	}
+	.page_4 .div4_formulaire .form_content_responsive{
+		display:block;
+	}
+	.page_4 .rsg_localisation{
+		margin:2%;
+	}
+	
+	
+	/* ########## FOOTER ########## */
+	
+	.div_container_CNIL {
+		display : none;
+	}
+	
+	.div_plan {
+		flex-basis : 66%;
+		font-size : 2.8vw;
+	}
+	
+	.div_CNIL_tel {
+		display : block;
+	}
+	
+	.div_CNIL_tel a {
+		color : #1c2833;
+		font-size : 3vw;
+	}
+	
+	.icons {
+		font-size : 3.5vw;
+	}
+	
+	
+	.container_icons_tel {
+		display : flex;
+		align-self : stretch;
+		align-items : center;
+		justify-content : space-between;
+		padding : 1% 0;
+		flex-basis : 5%;
+		flex-direction : column;
+	}
+	
+	.div_img_entreprise {
+		flex-basis : 25%;
+		margin-left : 4%;
+	}
+}
+
+
+@media only screen and (min-width: 641px)and (max-width: 680px){
+/* Pour eviter que le "BUT" passe à la ligne dans le footer */
+
+	.div_plan a {
+		font-size : 85%;
+	}
+	
+}
+
+
+@media only screen and (min-width: 641px)and (max-width: 970px){
+/* Pour que le texte ne dépasse jamais la hauteur du tableau */
+
+	.page2 .partie1 .div_txt2 {
+		font-size : 1.7vw;
+	}
+	
+}
